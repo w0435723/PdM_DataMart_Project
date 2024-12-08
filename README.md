@@ -23,3 +23,10 @@ It can be found on [Kaggle](https://www.kaggle.com/datasets/arnabbiswas1/microso
 **📝 Datamart Scope Questions:**  
 
 1. 
+
+**📝 Project Files:**   
+
+[Datamart project notebook]
+[ERD diagram]  
+[SQL DDL Scripts] 
+[SQL DML Loader] 
