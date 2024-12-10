@@ -29,6 +29,7 @@ The datamart can be used to:
 1.  Identify trends in failures and errors.  
 2.  Analyze machine performancce metrics.
 3.	Analyze maintenance schedules for machine components
+4.	Predict potential machine breakdowns using telemetry.  
 
 **📝 Project Files:**   
 
