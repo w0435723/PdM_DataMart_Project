@@ -67,6 +67,38 @@ WHERE NOT EXISTS (
 );
 GO
 
+--- dim.Calendar ---
+
+IF (SELECT count(*) FROM dim.Calendar) = 0
+BEGIN
+    -- Declare variables
+    DECLARE @StartDate DATE = '2014-01-01'
+    DECLARE @EndDate DATE = '2016-12-31'
+    DECLARE @Date DATE = @StartDate
+    DECLARE @DayID INT = (DATEPART(YEAR, @StartDate) - 1900) * 1000 + DATEPART(DY, @StartDate);
+
+    -- Populate the Calendar table
+    WHILE @Date <= @EndDate
+    BEGIN
+        INSERT INTO dim.Calendar (CalendarDateTime, Year, Month, Day, Hour, Weekday)
+        VALUES (
+            @Date,                             -- CalendarDateTime
+            YEAR(@Date),                       -- Year
+            MONTH(@Date),                      -- Month
+            DAY(@Date),                        -- Day
+            0,                                 -- Hour (set to 0 for static calendar entries)
+            DATENAME(WEEKDAY, @Date)           -- Weekday (e.g., Monday, Tuesday)
+        );
+
+        -- Increment the date and DayID
+        SET @Date = DATEADD(DAY, 1, @Date);
+        SET @DayID = @DayID + 1;
+    END
+END
+GO
+
+
+
 /*********************************************************/
 /***************     Load Fact tables    *****************/
 /*********************************************************/
