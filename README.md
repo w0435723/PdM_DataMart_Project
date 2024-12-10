@@ -24,13 +24,18 @@ The datasets are sourced from Microsoft Azure Predictive Maintenance Dataset. It
 
 **📝 Datamart Objectives / Key Points:**  
 
-1.  Identify trends in failures and errors
-2.  Analyze machine perfoamrnace metrics
+The datamart can be used to:
+
+1.  Identify trends in failures and errors.  
+2.  Analyze machine performancce metrics.
+3.	Analyze maintenance schedules for machine components
 
 **📝 Project Files:**   
 
-[Datamart project notebook]  
-[ERD diagram]    
-[SQL DDL Scripts]   
-[SQL DML Loader]   
-[Data files]  
+Project files in this repository are:  
+
+[Datamart project notebook](https://github.com/w0435723/PdM_DataMart_Project/blob/main/PdM_DataMart_Project.ipynb)  
+[ERD diagram](https://github.com/w0435723/PdM_DataMart_Project/blob/main/images/PdM_ERD.png)  
+[SQL DDL Scripts](https://github.com/w0435723/PdM_DataMart_Project/blob/main/SQL_files/PdM_Sql_DDL.sql)    
+[SQL DML Loader](https://github.com/w0435723/PdM_DataMart_Project/blob/main/SQL_files/PdM_Sql_DML.sql)  
+[Source data files](https://github.com/w0435723/PdM_DataMart_Project/tree/main/data)  
